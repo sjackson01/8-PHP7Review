@@ -15,7 +15,7 @@ function getTotal(float $a, float $b) : float {
     return $a + $b;
 }
 
-getTotal('Wall', 1);
+//getTotal('Wall', 1);
 
 //PHP 7 try catch block vs PHP 5
 try{
@@ -23,5 +23,34 @@ try{
 }catch(Throwable $t){
     //Execute only in PHP 7, will not match in PHP 5
 }catch(Exception $e){
-    //Execute only in PHP 5, will not be reaced in PHP 7
+    //Execute only in PHP 5, will not be reached in PHP 7
 }
+
+//New operators in PHP 7
+
+/** Space Ship Operator 
+ * Tests if the value on the left < value on the right.
+ * Next tests if value on the left is = to the value on the right.
+ * Finally tests if value on the right is < than value on the left
+ */ 
+
+ //If < returns 1 
+ //If = returns 0
+ //If > returns -1 
+echo $compare = 2 <=> 1;
+
+/** Null Coalesce Operator 
+ * Looks explicitly for null or does not exist so it will pick up
+ * an empty string.  If the variable first name is set and it 
+ * is not null it will assign that value to variable name or else 
+ * it will assign guest to the variable name.  
+ */ 
+
+ $name = $firstName ?? "Guest";
+
+ //When one is found that is not null it will assign it to name
+ $name = $firstName ?? $username ?? $placeholder ?? "Guest";
+
+
+
+
