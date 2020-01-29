@@ -51,6 +51,16 @@ echo $compare = 2 <=> 1;
  //When one is found that is not null it will assign it to name
  $name = $firstName ?? $username ?? $placeholder ?? "Guest";
 
+ /* CSPRNG */
+
+ //Random bytes returns string of crytographically secure random bytes not integers
+ $bytes = random_bytes(5); //Length in bytes
+ var_dump(bin2hex($bytes)); //string(10) "385e33f741" hex representation of bytes 
+
+ //Random number or in supply two arguments min-max
+ echo random_int(1,20);//includes 1 and 20
+
+
 
 
 
